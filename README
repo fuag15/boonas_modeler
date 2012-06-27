@@ -3,3 +3,5 @@ The outputs may look extremely simple, but all the geometry and spacial calculat
 Everything is defined in a persistent file and can be added via command line procedures so it would be easy to slap a nice ui on this and have a fairly simple modeling program.
 
 The files i provide, one is the egg, i hard coded the Bezier Patch so it needs a separate executable, the other version has scripts to generate the scenes via command line and then view them the same way.
+
+For some pretty pictures of this project and other non-code related things I'm doing check out http://www.steelpigeondesign.com/project_categories/1/projs/3
