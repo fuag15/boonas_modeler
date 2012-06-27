@@ -1,0 +1,45 @@
+Michael Boone
+
+To compile:
+
+cd into boonas, use qmake-qt4 and make to compile
+copy boonas binary into the test foldier
+
+cd into viewer, use qmake-qt4 and make to compile
+copy viewer binary into the test foldier
+
+To test:
+
+cd into the test foldier
+execute
+./viewer egg.poly 0 0 -10
+
+NOTE: The first argument is the .poly file to view, the next three are x, y, z starting position of the camera, camera starts looking up z
+
+Explanation:
+
+I used boonas to model these, there are some new constraints, you must now use all quads when modeling but besides that the boonas is the same code
+from assignment 3.
+
+There are some things you must change in the .poly files:
+
+the first line must be used to name your file, it can be in any format, one line, first line of file
+after this line you list any texture names to be used, it orders them by top is 1 , next is 2, next is 3 etc
+at the end of the textures, and even if there are no textures you must put a line that contains endTexDef case sensative
+
+before the declaration of newObject you can place a number to texture that polygon with that texture
+ie: 1 newObject would texture that object with the first texture.
+
+Reflection:
+
+I hard coded the bezier patches and texturing of the bezier patches since it would have been a lot of work to fit thier definitions into the .poly file although it is definitely doable. I implimented the code to detect it so that if you place the keyword bez in your newObject line it will detect it as a bezier curve, i think it just printes NEW BEZIER a lot if you do this since i only started the if statement. You could impliment the if statement so it runs through the next 16 object and loads them correctly into the 3 dimentional array for the control points and then pass that into the map function call and also it had support for implimenting bezier patch texturing in this manner but it seemed like a ton of work and since i don't have a modeling program set up to spit out bezier patches correctly or rotate them it seemed much better to just code the arrays in as constants for the top and bottom of the egg.
+
+For some reason the textures did not want to stay in opengl through function calls so i had to load and unload them into opengl everytime i wanted to draw which isn't a big problem as this isn't a program trying to reach max performance however I wish i had time to do research on that and find out why.
+
+Looking back on my data structure I've used throughout the quarter i would definitely change it to contain a dummy front and back node to fix all the hickups in my loops that were there to deal with not bieng able to determine when the datastructure was at the last bit or not.
+
+Also, on my last tests I noticed a hickup in the looking / movement system where if you are moving up and down diagonally across the z axis, the up and down movement will get thrown out when you cross over the axis barier, this could be fixed by instead of loding the old vector, doing the rotate the inverse number of degrees or radians.
+
+I really liked the class and am def looking into the other graphics courses offered as well as some stuff online. Hope you have a great break!
+
+-Mike

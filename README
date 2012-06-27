@@ -1,0 +1,5 @@
+The outputs may look extremely simple, but all the geometry and spacial calculations are done manually, no OpenGL was used. I did this to teach myself the under workings of OpenGL. It was quite an undertaking to get working smoothly, flying around in it your reminded of one of those first tries at 3D software rendering in old games.
+
+Everything is defined in a persistent file and can be added via command line procedures so it would be easy to slap a nice ui on this and have a fairly simple modeling program.
+
+The files i provide, one is the egg, i hard coded the Bezier Patch so it needs a separate executable, the other version has scripts to generate the scenes via command line and then view them the same way.

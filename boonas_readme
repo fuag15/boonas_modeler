@@ -1,0 +1,37 @@
+- there is a new command for boonas, it is like the polygon command but the first 3 points are taken as rgb color values
+
+# boonas polygonC <outfile> <r> <g> <b> . . .. .
+
+-boonas command for rotation on an arbitrary axis is as follows
+
+# boonas rot <infile> <outfile> <vectx> <vecty> <vectz> <x> <y> <z> <number of duplications> <amount to rotate in degrees>
+
+-boonas command for clipping is as follows, the in polygons are
+
+# boonas clip <infile> <outfile> <vectx> <vecty> <vectz> <x> <y> <z>
+
+-the viewer command has changed, it now always starts you looking towards positive z from whatever point  you pass it
+the command is now called thus
+
+# viewer <full name of file to view> <camera x> <camera y> <camera z>
+
+you can then use the mouse to interact with the program. clicking engages mouse tracking so you can look around with the
+mouse, right click to speed up, left click to slow down, middle click to disengage mouse tracking and stop the speed.
+you can use middle click to look around from a stagnant position. 
+
+############# to compile and test #################
+
+to compile cd into boonas, use qmake and make to make boonas copy boonas into the test directory
+do the same except for viewer with the viewer directory.
+	
+cd into the test directory and check out the example shell scripts
+
+clip.sh an example of clip
+
+rot.sh an example of rotation around an arbitrary axis
+
+benchAsh.sh scene of bench and ash tray from outside kempe
+
+building.sh scene of the front of rosseler hall
+
+I used crazy colors in them so that differnt things could be discerned, since there was no shading or texstures things blurred together if they were the same color.
